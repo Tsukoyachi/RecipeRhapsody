@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
+    <recipes>
+        <recipe>
+            <name>Pesto pasta</name>
+            <ingredients>
+                <ingredient ingredientId="1">
+                    <quantity>80g</quantity>
+                </ingredient>
+                <ingredient ingredientId="2">
+                    <quantity>3 table spoon</quantity>
+                </ingredient>
+            </ingredients>
+            <userRatings>
+                <userRate userId="1">Easy and efficient</userRate>
+            </userRatings>
+        </recipe>
+    </recipes>
+
+    <users>
+        <user userId="1">Axel Delille</user>
+    </users>
+
+    <ingredients>
+        <ingredient ingredientId="1">
+            <name>Pasta</name>
+        </ingredient>
+        <ingredient ingredientId="2">
+            <name>Pesto</name>
+        </ingredient>
+    </ingredients>
+</recipeBook>

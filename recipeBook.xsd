@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="recipeBook" type="RecipeBookType">
+        <xs:key name="userId">
+            <xs:selector xpath="./users/user"/>
+            <xs:field xpath="@userId"/>
+        </xs:key>
+
+        <xs:keyref name="userIdRef" refer="userId">
+            <xs:selector xpath="./recipes/recipe/userRatings/userRate"/>
+            <xs:field xpath="@userId"/>
+        </xs:keyref>
+
+        <xs:key name="ingredientId">
+            <xs:selector xpath="./ingredients/ingredient"/>
+            <xs:field xpath="@ingredientId"/>
+        </xs:key>
+
+        <xs:keyref name="ingredientIdRef" refer="ingredientId">
+            <xs:selector xpath="./recipes/recipe/ingredients/ingredient"/>
+            <xs:field xpath="@ingredientId"/>
+        </xs:keyref>
+    </xs:element>
+
+    <xs:complexType name="RecipeBookType">
+        <xs:sequence>
+            <xs:element name="recipes" type="RecipesType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="users" type="UsersBaseType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ingredients" type="IngredientsBaseType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RecipesType">
+        <xs:sequence>
+            <xs:element name="recipe" type="RecipeType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RecipeType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ingredients" type="IngredientsType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="userRatings" type="UserRatingsType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IngredientsType">
+        <xs:sequence>
+            <xs:element name="ingredient" type="IngredientType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IngredientType">
+        <xs:sequence>
+            <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="ingredientId" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="UserRatingsType">
+        <xs:sequence>
+            <xs:element name="userRate" type="UserRatingType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UserRatingType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="userId" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="UsersBaseType">
+        <xs:sequence>
+            <xs:element name="user" type="UserBaseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UserBaseType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="userId" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="IngredientsBaseType">
+        <xs:sequence>
+            <xs:element name="ingredient" type="IngredientBaseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IngredientBaseType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="ingredientId" type="xs:string"/>
+    </xs:complexType>
+
+</xs:schema>
