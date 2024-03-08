@@ -21,6 +21,16 @@
             <xs:field xpath="@ingredientId"/>
         </xs:keyref>
 
+        <xs:key name="allergenId">
+            <xs:selector xpath="./allergens/allergen"/>
+            <xs:field xpath="@allergenId"/>
+        </xs:key>
+
+        <xs:keyref name="allergenIdRef" refer="allergenId">
+            <xs:selector xpath="./recipes/recipe/allergens/allergen"/>
+            <xs:field xpath="@allergenId"/>
+        </xs:keyref>
+
         <xs:key name="toolId">
             <xs:selector xpath="./tools/tool"/>
             <xs:field xpath="@toolId"/>
@@ -38,6 +48,7 @@
             <xs:element name="users" type="UsersBaseType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="ingredients" type="IngredientsBaseType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="tools" type="ToolsBaseType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="allergens" type="AllergensBaseType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -52,6 +63,7 @@
             <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="image" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="ingredients" type="IngredientsType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="allergens" type="AllergensType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="tools" type="ToolsType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="steps" type="StepsType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="userRatings" type="UserRatingsType" minOccurs="0" maxOccurs="1"/>
@@ -69,6 +81,16 @@
             <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="ingredientId" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="AllergensType">
+        <xs:sequence>
+            <xs:element name="allergen" type="AllergenType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AllergenType">
+        <xs:attribute name="allergenId" type="xs:string" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="ToolsType">
@@ -147,6 +169,20 @@
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="toolId" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="AllergensBaseType">
+        <xs:sequence>
+            <xs:element name="allergen" type="AllergenBaseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AllergenBaseType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="allergenId" type="xs:string" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>

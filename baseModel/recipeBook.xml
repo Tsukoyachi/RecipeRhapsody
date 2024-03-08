@@ -3,6 +3,7 @@
     <recipes>
         <recipe>
             <name>Pesto pasta</name>
+            <image>https://assets.afcdn.com/recipe/20130924/64004_w1024h576c1cx3456cy2304.jpg</image>
             <ingredients>
                 <ingredient ingredientId="1">
                     <quantity>180g</quantity>
@@ -29,6 +30,9 @@
                     <quantity>1</quantity>
                 </ingredient>
             </ingredients>
+            <allergens>
+                <allergen allergenId="1"/>
+            </allergens>
             <tools>
                 <tool toolId="1"/>
             </tools>
@@ -61,7 +65,7 @@
     </users>
 
     <ingredients>
-        <ingredient ingredientId="1">Pasta</ingredient>
+        <ingredient ingredientId="1">pasta</ingredient>
         <ingredient ingredientId="2">long-stem broccoli</ingredient>
         <ingredient ingredientId="3">olive oil</ingredient>
         <ingredient ingredientId="4">garlic clove</ingredient>
@@ -75,4 +79,8 @@
         <tool toolId="1">pan</tool>
         <tool toolId="2">frying pan</tool>
     </tools>
+
+    <allergens>
+        <allergen allergenId="1">gluten</allergen>
+    </allergens>
 </recipeBook>
