@@ -20,6 +20,16 @@
             <xs:selector xpath="./recipes/recipe/ingredients/ingredient"/>
             <xs:field xpath="@ingredientId"/>
         </xs:keyref>
+
+        <xs:key name="toolId">
+            <xs:selector xpath="./tools/tool"/>
+            <xs:field xpath="@toolId"/>
+        </xs:key>
+
+        <xs:keyref name="toolIdRef" refer="toolId">
+            <xs:selector xpath="./recipes/recipe/tools/tool"/>
+            <xs:field xpath="@toolId"/>
+        </xs:keyref>
     </xs:element>
 
     <xs:complexType name="RecipeBookType">
@@ -27,6 +37,7 @@
             <xs:element name="recipes" type="RecipesType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="users" type="UsersBaseType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="ingredients" type="IngredientsBaseType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="tools" type="ToolsBaseType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -39,8 +50,11 @@
     <xs:complexType name="RecipeType">
         <xs:sequence>
             <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="image" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="ingredients" type="IngredientsType" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="userRatings" type="UserRatingsType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tools" type="ToolsType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="steps" type="StepsType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="userRatings" type="UserRatingsType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -54,7 +68,30 @@
         <xs:sequence>
             <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
-        <xs:attribute name="ingredientId" type="xs:string"/>
+        <xs:attribute name="ingredientId" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ToolsType">
+        <xs:sequence>
+            <xs:element name="tool" type="ToolType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ToolType">
+        <xs:attribute name="toolId" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="StepsType">
+        <xs:sequence>
+            <xs:element name="step" type="StepType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StepType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="photo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="UserRatingsType">
@@ -66,7 +103,8 @@
     <xs:complexType name="UserRatingType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="userId" type="xs:string"/>
+                <xs:attribute name="userId" type="xs:string" use="required"/>
+                <xs:attribute name="grade" type="xs:string" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -92,10 +130,24 @@
     </xs:complexType>
 
     <xs:complexType name="IngredientBaseType">
-        <xs:sequence>
-            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
-        </xs:sequence>
-        <xs:attribute name="ingredientId" type="xs:string"/>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="ingredientId" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
 
+    <xs:complexType name="ToolsBaseType">
+        <xs:sequence>
+            <xs:element name="tool" type="ToolBaseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ToolBaseType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="toolId" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 </xs:schema>

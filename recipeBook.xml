@@ -5,14 +5,53 @@
             <name>Pesto pasta</name>
             <ingredients>
                 <ingredient ingredientId="1">
-                    <quantity>80g</quantity>
+                    <quantity>180g</quantity>
                 </ingredient>
                 <ingredient ingredientId="2">
-                    <quantity>3 table spoon</quantity>
+                    <quantity>100g</quantity>
+                </ingredient>
+                <ingredient ingredientId="3">
+                    <quantity>2 tablespoon</quantity>
+                </ingredient>
+                <ingredient ingredientId="4">
+                    <quantity>1 large</quantity>
+                </ingredient>
+                <ingredient ingredientId="5">
+                    <quantity>150g</quantity>
+                </ingredient>
+                <ingredient ingredientId="6">
+                    <quantity>150g</quantity>
+                </ingredient>
+                <ingredient ingredientId="7">
+                    <quantity>1 heaped tablespoon</quantity>
+                </ingredient>
+                <ingredient ingredientId="8">
+                    <quantity>1</quantity>
                 </ingredient>
             </ingredients>
+            <tools>
+                <tool toolId="1"/>
+            </tools>
+            <steps>
+                <step>
+                    <description>Bring a pan of lightly salted water to the boil. Add the broccoli and boil for 1 min 30 secs, or until tender. Drain and set aside. Cook the spaghetti following pack instructions, then drain, reserving a ladleful of cooking water.</description>
+                    <photo>https://www.wikihow.com/images/thumb/d/d0/Boil-Water-Step-8-Version-9.jpg/v4-460px-Boil-Water-Step-8-Version-9.jpg</photo>
+                </step>
+                <step>
+                    <description>Heat the oil in a large frying pan, add the garlic clove and fry over a low heat for 2 mins. Remove with a slotted spoon and discard, leaving the flavoured oil.</description>
+                    <photo>https://www.allrecipes.com/thmb/BD9DhdanpJsrBu6rHK7EFrRkBGU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-roast-garlic-in-pan-ar-2000-7bec42d9517e4cab9db93619a5bba52d.jpg</photo>
+                </step>
+                <step>
+                    <description>Add the tomatoes to the pan and fry over a medium heat for 5 mins, or until beginning to soften and turn juicy. Stir through the prawns and cook for 2 mins, or until turning pink. Add the harissa and lemon zest, stirring to coat.</description>
+                    <photo>https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/07/How-to-Make-Blistered-Tomatoes-1.jpg</photo>
+                </step>
+                <step>
+                    <description>Toss the cooked spaghetti and pasta water through the prawns and harissa. Stir through the broccoli, season to taste and serve.</description>
+                    <photo>https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn-harissa-spaghetti-d29786f.jpg?resize=768,574</photo>
+                </step>
+            </steps>
             <userRatings>
-                <userRate userId="1">Easy and efficient</userRate>
+                <userRate userId="1" grade="4.5">Easy and efficient</userRate>
             </userRatings>
         </recipe>
     </recipes>
@@ -22,11 +61,18 @@
     </users>
 
     <ingredients>
-        <ingredient ingredientId="1">
-            <name>Pasta</name>
-        </ingredient>
-        <ingredient ingredientId="2">
-            <name>Pesto</name>
-        </ingredient>
+        <ingredient ingredientId="1">Pasta</ingredient>
+        <ingredient ingredientId="2">long-stem broccoli</ingredient>
+        <ingredient ingredientId="3">olive oil</ingredient>
+        <ingredient ingredientId="4">garlic clove</ingredient>
+        <ingredient ingredientId="5">cherry tomatoes</ingredient>
+        <ingredient ingredientId="6">raw king prawns</ingredient>
+        <ingredient ingredientId="7">rose harissa paste</ingredient>
+        <ingredient ingredientId="8">lemon</ingredient>
     </ingredients>
+
+    <tools>
+        <tool toolId="1">pan</tool>
+        <tool toolId="2">frying pan</tool>
+    </tools>
 </recipeBook>
