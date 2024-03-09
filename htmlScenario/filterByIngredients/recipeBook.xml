@@ -4,7 +4,7 @@
     <recipes>
         <recipe>
             <name>Pesto pasta</name>
-            <image>https://assets.afcdn.com/recipe/20130924/64004_w1024h576c1cx3456cy2304.jpg</image>
+            <image>https://assets.afcdn.com/recipe/20130924/64004_w1024h576c1cx3456cy2304.jpg?resize=768,574</image>
             <ingredients>
                 <ingredient ingredientId="1">
                     <quantity>180g</quantity>
@@ -40,15 +40,15 @@
             <steps>
                 <step>
                     <description>Bring a pan of lightly salted water to the boil. Add the broccoli and boil for 1 min 30 secs, or until tender. Drain and set aside. Cook the spaghetti following pack instructions, then drain, reserving a ladleful of cooking water.</description>
-                    <photo>https://www.wikihow.com/images/thumb/d/d0/Boil-Water-Step-8-Version-9.jpg/v4-460px-Boil-Water-Step-8-Version-9.jpg</photo>
+                    <photo>https://www.wikihow.com/images/thumb/d/d0/Boil-Water-Step-8-Version-9.jpg/v4-460px-Boil-Water-Step-8-Version-9.jpg?resize=768,574</photo>
                 </step>
                 <step>
                     <description>Heat the oil in a large frying pan, add the garlic clove and fry over a low heat for 2 mins. Remove with a slotted spoon and discard, leaving the flavoured oil.</description>
-                    <photo>https://www.allrecipes.com/thmb/BD9DhdanpJsrBu6rHK7EFrRkBGU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-roast-garlic-in-pan-ar-2000-7bec42d9517e4cab9db93619a5bba52d.jpg</photo>
+                    <photo>https://www.allrecipes.com/thmb/BD9DhdanpJsrBu6rHK7EFrRkBGU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-roast-garlic-in-pan-ar-2000-7bec42d9517e4cab9db93619a5bba52d.jpg?resize=768,574</photo>
                 </step>
                 <step>
                     <description>Add the tomatoes to the pan and fry over a medium heat for 5 mins, or until beginning to soften and turn juicy. Stir through the prawns and cook for 2 mins, or until turning pink. Add the harissa and lemon zest, stirring to coat.</description>
-                    <photo>https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/07/How-to-Make-Blistered-Tomatoes-1.jpg</photo>
+                    <photo>https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/07/How-to-Make-Blistered-Tomatoes-1.jpg?resize=768,574</photo>
                 </step>
                 <step>
                     <description>Toss the cooked spaghetti and pasta water through the prawns and harissa. Stir through the broccoli, season to taste and serve.</description>
@@ -61,7 +61,7 @@
         </recipe>
         <recipe>
             <name>Entrecôte</name>
-            <image>https://www.smeg.com/binaries/content/gallery/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/brx%3ApostcardDeskLarge</image>
+            <image>https://www.smeg.com/binaries/content/gallery/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/brx%3ApostcardDeskLarge?resize=768,574</image>
             <ingredients>
                 <ingredient ingredientId="9">
                     <quantity>400g</quantity>

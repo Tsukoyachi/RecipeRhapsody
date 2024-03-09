@@ -22,23 +22,20 @@
             <body>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipes[not(allergens/allergen/@allergenId = $excludedAllergenId)]"/>
+                    <xsl:apply-templates select="//recipe[not(allergens/allergen/@allergenId = $excludedAllergenId)]"/>
                 </div>
             </body>
         </html>
     </xsl:template>
 
     <!-- Template to match recipes without the excluded allergenId -->
-    <xsl:template match="recipes">
-        <!-- Display recipes -->
-        <xsl:apply-templates select="//recipe[not(allergens/allergen/@allergenId = $excludedAllergenId)]"/>
-    </xsl:template>
-
-    <!-- Template to match recipes without the excluded allergenId -->
     <xsl:template match="recipe">
         <!-- Display recipe information -->
-        <div class="recipe-container">
-            <h2 onclick="extend(this)"><xsl:value-of select="name"/></h2>
+        <div class="recipes-container">
+            <div class="recipe-header">
+                <h2 class="recipe-title-header" onclick="extend(this)"><xsl:value-of select="name"/></h2>
+                <img class="recipe-image-header" src="{image}" alt="Recipe Image" id="image-header"/>
+            </div>
             <!-- Display recipe image -->
             <div id="content">
                 <img class="recipe-image" src="{image}" alt="Recipe Image"/>
