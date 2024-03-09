@@ -2,10 +2,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
-
-    <!-- Define the excluded allergenId for gluten using XPath -->
-    <xsl:variable name="excludedAllergenId" select="//allergen[text()='gluten']/@allergenId"/>
-
     <!-- Define a variable for ingredient names -->
     <xsl:variable name="ingredientNames" select="/recipeBook/ingredients/ingredient"/>
 
@@ -20,9 +16,30 @@
                 <script src="script.js"></script>
             </head>
             <body>
+                <div class="head-menu-container">
+                    <img class="logo" src="./../../ressources/logo.png" alt="Logo Image"/>
+                    <div class="search-filter">
+                        <p>
+                            <input type="checkbox" id="exact-only" />
+                            Without gluten
+                        </p>
+                        <p>
+                            <input type="checkbox" id="exact-only" />
+                            Vegie
+                        </p>
+                        <p>
+                            <input type="checkbox" id="exact-only" />
+                            Saisonal products
+                        </p>
+                        <p>
+                            <input type="checkbox" id="exact-only" checked="true"/>
+                            Minimal rate : 4
+                        </p>
+                    </div>
+                </div>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipe[not(allergens/allergen/@allergenId = $excludedAllergenId)]"/>
+                    <xsl:apply-templates select="//recipe[userRatings/userRate[@grade > 4]]"/>
                 </div>
             </body>
         </html>

@@ -22,16 +22,58 @@ body, h1, h2, p, ul, ol, li {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: lightgoldenrodyellow;
+    background-color: #bcc0c7;
 }
 
-.recipe-container {
+.recipes-container {
+    width: 60%; /* Set the width of the recipe container to 60% */
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.recipe-header{
+    height: 100px;   
+    display: flex;
+    overflow: hidden;
+}
+
+.recipe-title-header{
+    margin: auto auto auto 20;
+    width: 30%;
+    padding: 10px;
+}
+
+.recipe-image-header {
+    width: 70%;
+    display: block;
+    height: 220px;
+    border-radius: 8px;
+    margin: -70 0 0 auto;
+}
+
+.head-menu-container {
     width: 60%; /* Set the width of the recipe container to 60% */
     margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    height: 100px;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.search-filter{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
 }
 
 .recipe-container h2 {
@@ -52,11 +94,14 @@ body {
     color: #333;
     font-weight: bold;
     margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .ingredients-list, .steps-list {
     list-style-type: none;
     padding: 0;
+    margin-left: 7%;
 }
 
 .ingredients-list li, .steps-list li {
@@ -90,3 +135,5 @@ body {
     border-bottom: 1px solid #ddd; /* Adjust the color as needed */
     padding-bottom: 10px; /* Add some spacing between steps */
 }
+
+#content {display: none;}

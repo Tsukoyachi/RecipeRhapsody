@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="filterByAllergen.xsl"?>
+<?xml-stylesheet type="text/xsl" href="filterByRateOver4.xsl"?>
 <recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
     <recipes>
         <recipe>
@@ -32,7 +32,7 @@
                 </ingredient>
             </ingredients>
             <allergens>
-                <!-- <allergen allergenId="1"/> -->
+                <allergen allergenId="1"/>
             </allergens>
             <tools>
                 <tool toolId="1"/>
@@ -105,6 +105,52 @@
             </steps>
             <userRatings>
                 <userRate userId="1" grade="4.5">Easy and efficient</userRate>
+                <userRate userId="2" grade="5">Incredible for my saturday launch</userRate>
+            </userRatings>
+        </recipe>
+        <recipe>
+            <name>Lentilles aux carottes</name>
+            <image>https://www.papillesetpupilles.fr/wp-content/uploads/2012/12/Lentilles-a%CC%80-la-Marocaine-.jpg?resize=768,574</image>
+            <ingredients>
+                <ingredient ingredientId="13">
+                    <quantity>400g</quantity>
+                </ingredient>
+                <ingredient ingredientId="14">
+                    <quantity>1</quantity>
+                </ingredient>
+                <ingredient ingredientId="15">
+                    <quantity>2</quantity>
+                </ingredient>
+                <ingredient ingredientId="16">
+                    <quantity>2</quantity>
+                </ingredient>
+            </ingredients>
+            <allergens>
+                <!-- <allergen allergenId="1"/> -->
+            </allergens>
+            <tools>
+                <tool toolId="1"/>
+            </tools>
+            <steps>
+                <step>
+                    <description>Peel the onions, ginger and garlic cloves and chop them. Peel the carrot and cut it into large cubes.</description>
+                    <photo>https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/3690/live/e1eb2a80-6f47-11ed-94b2-efbc7109d3dd.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Sauté the chopped onions until they become translucent. Add garlic and ginger, but not too much...otherwise their taste could be distracting. Now add the lentils and carrot cubes. Cover with water and simmer for 30 minutes.</description>
+                    <photo>https://www.sushin.fr/wp-content/uploads/2022/12/Bendakaya-Fry-Recettes-de-legumes-de-Dassana-9118188..jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Now add the not-so-secret final ingredient: balsamic vinegar. Cook until the liquid has been completely absorbed. This dish goes with just about everything. And you won’t go wrong serving it with coleslaw…</description>
+                    <photo>https://img.passeportsante.net/1200x675/2022-08-01/shutterstock-1101390824.webp?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Directed by Élisabeth Scotto. Styling Sergio Da Silva. Photos Édouard Sicot. Recipes collected by Marina Rozenman.</description>
+                    <photo>https://sf2.viepratique.fr/wp-content/uploads/sites/2/2014/07/lentilles.jpg?resize=768,574</photo>
+                </step>
+            </steps>
+            <userRatings>
+                <userRate userId="2" grade="2.5">Low taste, not so much plaisure</userRate>
             </userRatings>
         </recipe>
         
@@ -112,6 +158,7 @@
 
     <users>
         <user userId="1">Axel Delille</user>
+        <user userId="2">Yvann Ponce</user>
     </users>
 
     <ingredients>
@@ -127,6 +174,10 @@
         <ingredient ingredientId="10">salt</ingredient>
         <ingredient ingredientId="11">pepper</ingredient>
         <ingredient ingredientId="12">thym</ingredient>
+        <ingredient ingredientId="13">lentilles vertes</ingredient>
+        <ingredient ingredientId="14">carotte</ingredient>
+        <ingredient ingredientId="15">oignon</ingredient>
+        <ingredient ingredientId="16">gingembre</ingredient>
 
     </ingredients>
 

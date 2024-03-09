@@ -54,13 +54,26 @@ body {
     margin: -70 0 0 auto;
 }
 
-.recipe-container {
+.head-menu-container {
     width: 60%; /* Set the width of the recipe container to 60% */
     margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    height: 100px;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.search-filter{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
 }
 
 .recipe-container h2 {
