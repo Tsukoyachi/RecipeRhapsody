@@ -32,8 +32,8 @@
     <xsl:template match="recipe">
         <!-- Display recipe information -->
         <div class="recipes-container">
-            <div class="recipe-header">
-                <h2 class="recipe-title-header" onclick="extend(this)"><xsl:value-of select="name"/></h2>
+            <div class="recipe-header" onclick="extend(this)">
+                <h2 class="recipe-title-header"><xsl:value-of select="name"/></h2>
                 <img class="recipe-image-header" src="{image}" alt="Recipe Image" id="image-header"/>
             </div>
             <!-- Display recipe image -->
