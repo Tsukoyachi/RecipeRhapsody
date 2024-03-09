@@ -32,10 +32,6 @@
                             Vegie
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" />
-                            Saisonal products
-                        </p>
-                        <p>
                             <input type="checkbox" id="exact-only" onclick="location.href = '../all/recipeBook.xml'"  checked="true"/>
                             Minimal rate : 4
                         </p>
