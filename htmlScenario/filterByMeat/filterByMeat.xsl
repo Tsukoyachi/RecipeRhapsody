@@ -2,6 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+
+    <!-- Define the excluded meat for vegie using XPath -->
+    <xsl:variable name="excludedMeatId" select="//ingredient[@category='meat']/@ingredientId"/>
     <!-- Define a variable for ingredient names -->
     <xsl:variable name="ingredientNames" select="/recipeBook/ingredients/ingredient"/>
 
@@ -24,7 +27,7 @@
                             Without gluten
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByMeat/recipeBook.xml'"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../all/recipeBook.xml'"  checked="true"/>
                             Carnivorous
                         </p>
                         <p>
@@ -36,14 +39,14 @@
                             Saisonal products
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../all/recipeBook.xml'"  checked="true"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml'"/>
                             Minimal rate : 4
                         </p>
                     </div>
                 </div>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipe[userRatings/userRate[@grade > 4]]"/>
+                    <xsl:apply-templates select="//recipe[ingredients/ingredient/@ingredientId = $excludedMeatId]"/>
                 </div>
             </body>
         </html>

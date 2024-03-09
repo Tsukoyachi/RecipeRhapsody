@@ -1,0 +1,139 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.montserrat-custom {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Replace <weight> with a value from 100 to 900 */
+    font-style: normal;
+}
+
+/* You can create additional styles with different weights if needed */
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Use the desired weight */
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #bcc0c7;
+}
+
+.recipes-container {
+    width: 60%; /* Set the width of the recipe container to 60% */
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.recipe-header{
+    height: 100px;   
+    display: flex;
+    overflow: hidden;
+}
+
+.recipe-title-header{
+    margin: auto auto auto 20;
+    width: 30%;
+    padding: 10px;
+}
+
+.recipe-image-header {
+    width: 70%;
+    display: block;
+    height: 220px;
+    border-radius: 8px;
+    margin: -70 0 0 auto;
+}
+
+.head-menu-container {
+    width: 60%; /* Set the width of the recipe container to 60% */
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    height: 100px;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.search-filter{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipe-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.recipe-image {
+    width: 60%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 10px auto; /* Center the image within its container */
+}
+
+.ingredients-title, .steps-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.ingredients-list, .steps-list {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 7%;
+}
+
+.ingredients-list li, .steps-list li {
+    margin-bottom: 10px;
+}
+
+.steps-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.steps-list li * {
+    flex-grow: 1;
+}
+
+.steps-list li p {
+    margin-left: 10px; /* Add some spacing between text and image */
+}
+
+.step-image {
+    height: auto;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 0 auto;
+}
+
+/* Line separator between steps */
+.steps-list li:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Adjust the color as needed */
+    padding-bottom: 10px; /* Add some spacing between steps */
+}
+
+#content {display: none;}

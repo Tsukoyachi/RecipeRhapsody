@@ -28,7 +28,7 @@
                             Carnivorous
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByVegie/recipeBook.xml'" />
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByVegie/recipeBook.xml'"/>
                             Vegie
                         </p>
                         <p>
@@ -36,14 +36,14 @@
                             Saisonal products
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../all/recipeBook.xml'"  checked="true"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml'"/>
                             Minimal rate : 4
                         </p>
                     </div>
                 </div>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipe[userRatings/userRate[@grade > 4]]"/>
+                    <xsl:apply-templates select="//recipe"/>
                 </div>
             </body>
         </html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="all.xsl"?>
+<?xml-stylesheet type="text/xsl" href="filterByVegie.xsl"?>
 <recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
     <recipes>
         <recipe>
@@ -162,22 +162,22 @@
     </users>
 
     <ingredients>
-        <ingredient ingredientId="1">pasta</ingredient>
-        <ingredient ingredientId="2">long-stem broccoli</ingredient>
-        <ingredient ingredientId="3">olive oil</ingredient>
-        <ingredient ingredientId="4">garlic clove</ingredient>
-        <ingredient ingredientId="5">cherry tomatoes</ingredient>
-        <ingredient ingredientId="6">raw king prawns</ingredient>
-        <ingredient ingredientId="7">rose harissa paste</ingredient>
-        <ingredient ingredientId="8">lemon</ingredient>
-        <ingredient ingredientId="9">entrecôte</ingredient>
-        <ingredient ingredientId="10">salt</ingredient>
-        <ingredient ingredientId="11">pepper</ingredient>
-        <ingredient ingredientId="12">thym</ingredient>
-        <ingredient ingredientId="13">lentilles vertes</ingredient>
-        <ingredient ingredientId="14">carotte</ingredient>
-        <ingredient ingredientId="15">oignon</ingredient>
-        <ingredient ingredientId="16">gingembre</ingredient>
+        <ingredient ingredientId="1" category="cereals" season="all">pasta</ingredient>
+        <ingredient ingredientId="2" category="vegetables" season="spring">long-stem broccoli</ingredient>
+        <ingredient ingredientId="3" category="seasoning" season="all">olive oil</ingredient>
+        <ingredient ingredientId="4" category="seasoning" season="summer">garlic clove</ingredient>
+        <ingredient ingredientId="5" category="vegetables" season="summer">cherry tomatoes</ingredient>
+        <ingredient ingredientId="6" category="fish" season="all">raw king prawns</ingredient>
+        <ingredient ingredientId="7" category="seasoning" season="all">rose harissa paste</ingredient>
+        <ingredient ingredientId="8" category="fruit" season="all">lemon</ingredient>
+        <ingredient ingredientId="9" category="meat" season="all">entrecôte</ingredient>
+        <ingredient ingredientId="10" category="seasoning" season="all">salt</ingredient>
+        <ingredient ingredientId="11" category="seasoning" season="all">pepper</ingredient>
+        <ingredient ingredientId="12" category="seasoning" season="all">thym</ingredient>
+        <ingredient ingredientId="13" category="vegetables" season="all">lentilles vertes</ingredient>
+        <ingredient ingredientId="14" category="vegetables" season="summer">carotte</ingredient>
+        <ingredient ingredientId="15" category="vegetables" season="all">oignon</ingredient>
+        <ingredient ingredientId="16" category="seasoning" season="">autumn</ingredient>
 
     </ingredients>
 
