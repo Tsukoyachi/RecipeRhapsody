@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="filterByAllergen.xsl"?>
 <recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
     <recipes>
         <recipe>
@@ -31,7 +32,7 @@
                 </ingredient>
             </ingredients>
             <allergens>
-                <allergen allergenId="1"/>
+                <!-- <allergen allergenId="1"/> -->
             </allergens>
             <tools>
                 <tool toolId="1"/>
@@ -58,6 +59,55 @@
                 <userRate userId="1" grade="4.5">Easy and efficient</userRate>
             </userRatings>
         </recipe>
+        <recipe>
+            <name>Entrecôte</name>
+            <image>https://www.smeg.com/binaries/content/gallery/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/brx%3ApostcardDeskLarge</image>
+            <ingredients>
+                <ingredient ingredientId="9">
+                    <quantity>400g</quantity>
+                </ingredient>
+                <ingredient ingredientId="10">
+                    <quantity>1 pincée</quantity>
+                </ingredient>
+                <ingredient ingredientId="3">
+                    <quantity>2 tablespoon</quantity>
+                </ingredient>
+                <ingredient ingredientId="4">
+                    <quantity>1 large</quantity>
+                </ingredient>
+                <ingredient ingredientId="12">
+                    <quantity>1 branch</quantity>
+                </ingredient>
+            </ingredients>
+            <allergens>
+                <!-- <allergen allergenId="1"/> -->
+            </allergens>
+            <tools>
+                <tool toolId="1"/>
+            </tools>
+            <steps>
+                <step>
+                    <description>Melt the butter and oil mixture to have a very hot pan before placing the meat. Place the meat on the very hot pan and move it around so it doesn't stick.</description>
+                    <photo>https://images.slurrp.com/prodarticles/a946n88zu4.webp?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Place a sprig of thyme or herbs on the meat while cooking the first side.  </description>
+                    <photo>https://thekitchencommunity.org/wp-content/uploads/2024/02/image-1384.jpeg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Depending on the thickness of the meat and the desired cooking level (rare, medium rare, cooked), cook for 2 to 10 minutes per side. In general, 5 minutes is sufficient.</description>
+                    <photo>https://i.ytimg.com/vi/8QU5KMS1pjI/mqdefault.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Once the desired cooking level is reached, let it rest for 5 minutes under aluminum foil to let the meat relax while keeping it warm before serving.</description>
+                    <photo>https://www.foodandwine.com/thmb/H2lW8-DxUooFNawAapOllKOiY34=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Why-Let-Meat-Rest-After-Cooking-FT-BLOG0623-aa23e85b40ba4069837bda52a8b706d1.jpg?resize=768,574</photo>
+                </step>
+            </steps>
+            <userRatings>
+                <userRate userId="1" grade="4.5">Easy and efficient</userRate>
+            </userRatings>
+        </recipe>
+        
     </recipes>
 
     <users>
@@ -73,6 +123,11 @@
         <ingredient ingredientId="6">raw king prawns</ingredient>
         <ingredient ingredientId="7">rose harissa paste</ingredient>
         <ingredient ingredientId="8">lemon</ingredient>
+        <ingredient ingredientId="9">entrecôte</ingredient>
+        <ingredient ingredientId="10">salt</ingredient>
+        <ingredient ingredientId="11">pepper</ingredient>
+        <ingredient ingredientId="12">thym</ingredient>
+
     </ingredients>
 
     <tools>
