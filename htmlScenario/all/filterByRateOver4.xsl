@@ -2,8 +2,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
-    <!-- Define the excluded allergenId for gluten using XPath -->
-    <xsl:variable name="excludedAllergenId" select="//allergen[text()='gluten']/@allergenId"/>
     <!-- Define a variable for ingredient names -->
     <xsl:variable name="ingredientNames" select="/recipeBook/ingredients/ingredient"/>
 
@@ -22,11 +20,11 @@
                     <img class="logo" src="./../../ressources/logo.png" alt="Logo Image"/>
                     <div class="search-filter">
                         <p>
-                            <input type="checkbox" id="exact-only"  onclick="location.href = '../all/recipeBook.xml';" checked="true"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/recipeBook.xml';" />
                             Without gluten
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only"/>
+                            <input type="checkbox" id="exact-only" />
                             Vegie
                         </p>
                         <p>
@@ -34,14 +32,14 @@
                             Saisonal products
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml';"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml';" />
                             Minimal rate : 4
                         </p>
                     </div>
                 </div>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipe[not(allergens/allergen/@allergenId = $excludedAllergenId)]"/>
+                    <xsl:apply-templates select="//recipe"/>
                 </div>
             </body>
         </html>

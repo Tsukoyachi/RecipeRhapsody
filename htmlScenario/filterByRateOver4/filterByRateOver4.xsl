@@ -20,7 +20,7 @@
                     <img class="logo" src="./../../ressources/logo.png" alt="Logo Image"/>
                     <div class="search-filter">
                         <p>
-                            <input type="checkbox" id="exact-only" />
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/recipeBook.xml';" />
                             Without gluten
                         </p>
                         <p>
@@ -32,7 +32,7 @@
                             Saisonal products
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" checked="true"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../all/recipeBook.xml';" checked="true"/>
                             Minimal rate : 4
                         </p>
                     </div>
