@@ -30,8 +30,11 @@ body {
     margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 0px;
+    padding: 0;
     border-radius: 8px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .recipe-header{
@@ -40,8 +43,12 @@ body {
     overflow: hidden;
 }
 
+.recipes-container:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .recipe-title-header{
-    margin: auto auto auto 20;
+    margin: auto auto auto 20px;
     width: 30%;
     padding: 10px;
 }
@@ -51,7 +58,7 @@ body {
     display: block;
     height: 220px;
     border-radius: 8px;
-    margin: -70 0 0 auto;
+    margin: -70px 0 0 auto;
 }
 
 .head-menu-container {

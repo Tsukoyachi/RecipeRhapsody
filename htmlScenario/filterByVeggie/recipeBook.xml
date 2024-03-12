@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="filterByVegie.xsl"?>
+<?xml-stylesheet type="text/xsl" href="filterByVeggie.xsl"?>
 <recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/recipeBook.xsd">
     <recipes>
         <recipe>
@@ -144,7 +144,8 @@
                 </step>
             </steps>
             <userRatings>
-                <userRate userId="a6dbd7141d584b3399626ae2113899c1" grade="2.5">Low taste, not so much pleasure</userRate>
+                <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="0">It taste good, but it's sickening after a few bite</userRate>
+                <userRate userId="a6dbd7141d584b3399626ae2113899c1" grade="1">Low taste, not so much pleasure</userRate>
             </userRatings>
         </recipe>
 

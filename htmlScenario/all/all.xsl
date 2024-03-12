@@ -25,11 +25,11 @@
                         </p>
                         <p>
                             <input type="checkbox" id="exact-only" onclick="location.href = '../filterByMeat/recipeBook.xml'"/>
-                            Carnivorous
+                            With meat
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByVegie/recipeBook.xml'"/>
-                            Vegie
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByVeggie/recipeBook.xml'"/>
+                            Veggie
                         </p>
                         <p>
                             <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml'"/>
@@ -48,8 +48,8 @@
     <!-- Template to match recipes without the excluded allergenId -->
     <xsl:template match="recipe">
         <!-- Display recipe information -->
-        <div class="recipes-container">
-            <div class="recipe-header" onclick="extend(this)">
+        <div class="recipes-container" onclick="extend(this)">
+            <div class="recipe-header">
                 <h2 class="recipe-title-header"><xsl:value-of select="name"/></h2>
                 <img class="recipe-image-header" src="{image}" alt="Recipe Image" id="image-header"/>
             </div>
