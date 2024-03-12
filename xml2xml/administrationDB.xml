@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adminBoard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="administrationSchema.xsd">
+    <recipes>
+        <recipe>
+            <name>Prawn Harissa Spaghetti</name>
+            <rate>4</rate>
+        </recipe>
+        <recipe>
+            <name>Entrecôte</name>
+            <rate>5</rate>
+        </recipe>
+        <recipe>
+            <name>Lentils with carrots</name>
+            <rate>2.5</rate>
+        </recipe>
+    </recipes>
+
+    <users>
+        <user userId="d6caccae978f429592b2e196bd93a5e5">Axel Delille</user>
+        <user userId="a6dbd7141d584b3399626ae2113899c1">Yvann Ponce</user>
+    </users>
+
+    <ingredients>
+        <ingredient ingredientId="b29e99552e534ec6941167bf5786bb95" category="cereals" season="all">pasta</ingredient>
+        <ingredient ingredientId="e8f5ec0b471d48d9a35004ed4db435af" category="vegetables" season="spring">long-stem broccoli</ingredient>
+        <ingredient ingredientId="bd52ce293a7e4a9f87f6e189369f1d34" category="seasoning" season="all">olive oil</ingredient>
+        <ingredient ingredientId="b428ec01b3b642a891973c80aad42ae9" category="seasoning" season="summer">garlic clove</ingredient>
+        <ingredient ingredientId="a2cde1f3288b43528535fdf6fd64ef05" category="vegetables" season="summer">cherry tomatoes</ingredient>
+        <ingredient ingredientId="b746a8d5899740f3b50852a78259776d" category="fish" season="all">raw king prawns</ingredient>
+        <ingredient ingredientId="f3ee2149a9d242f887ef7a32e6c70c9f" category="seasoning" season="all">rose harissa paste</ingredient>
+        <ingredient ingredientId="c78e5e93f370459b85830a48ba787a38" category="fruit" season="all">lemon</ingredient>
+        <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0" category="meat" season="all">entrecôte</ingredient>
+        <ingredient ingredientId="f91e75748241458b83e9174bda8420c3" category="seasoning" season="all">salt</ingredient>
+        <ingredient ingredientId="a5fb23a6c0c74253abc6d1232ae7474d" category="seasoning" season="all">pepper</ingredient>
+        <ingredient ingredientId="eb5e7d5840a74115b4ccafadd27b990c" category="seasoning" season="all">thyme</ingredient>
+        <ingredient ingredientId="b682af6e57ea495cb6b38e40a24d59c5" category="vegetables" season="all">green lentils</ingredient>
+        <ingredient ingredientId="fbfa57c78e90459b9fcc3aee5ff7ccd5" category="vegetables" season="summer">carrot</ingredient>
+        <ingredient ingredientId="d5dbfdaeb22648bb81415592ff62d42b" category="vegetables" season="all">onion</ingredient>
+        <ingredient ingredientId="afb99739aa594a69b7c9a5fc620acce9" category="seasoning" season="">autumn</ingredient>
+    </ingredients>
+
+    <tools>
+        <tool toolId="be10b782fcc745a191ef4be306d85b6c">pan</tool>
+        <tool toolId="ea487a7e4b774b1e9d0b1f53613a4272">frying pan</tool>
+    </tools>
+</adminBoard>
