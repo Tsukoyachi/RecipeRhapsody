@@ -80,7 +80,7 @@
         <xs:sequence>
             <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
-        <xs:attribute name="ingredientId" type="xs:string" use="required"/>
+        <xs:attribute name="ingredientId" type="xs:IDREF" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="AllergensType">
@@ -90,7 +90,7 @@
     </xs:complexType>
 
     <xs:complexType name="AllergenType">
-        <xs:attribute name="allergenId" type="xs:string" use="required"/>
+        <xs:attribute name="allergenId" type="xs:IDREF" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="ToolsType">
@@ -100,7 +100,7 @@
     </xs:complexType>
 
     <xs:complexType name="ToolType">
-        <xs:attribute name="toolId" type="xs:string" use="required"/>
+        <xs:attribute name="toolId" type="xs:IDREF" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="StepsType">
@@ -125,7 +125,7 @@
     <xs:complexType name="UserRatingType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="userId" type="xs:string" use="required"/>
+                <xs:attribute name="userId" type="xs:IDREF" use="required"/>
                 <xs:attribute name="grade" type="xs:string" use="required"/>
             </xs:extension>
         </xs:simpleContent>
@@ -140,7 +140,7 @@
     <xs:complexType name="UserBaseType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="userId" type="xs:string"/>
+                <xs:attribute name="userId" type="xs:ID"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -154,7 +154,7 @@
     <xs:complexType name="IngredientBaseType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="ingredientId" type="xs:string" use="required"/>
+                <xs:attribute name="ingredientId" type="xs:ID" use="required"/>
                 <xs:attribute name="category" type="xs:string" use="required"/>
                 <xs:attribute name="season" type="xs:string" use="required"/>
             </xs:extension>
@@ -170,7 +170,7 @@
     <xs:complexType name="ToolBaseType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="toolId" type="xs:string" use="required"/>
+                <xs:attribute name="toolId" type="xs:ID" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -184,7 +184,7 @@
     <xs:complexType name="AllergenBaseType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="allergenId" type="xs:string" use="required"/>
+                <xs:attribute name="allergenId" type="xs:ID" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>

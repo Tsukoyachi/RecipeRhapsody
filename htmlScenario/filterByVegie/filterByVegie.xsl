@@ -11,12 +11,12 @@
     <!-- Root template -->
     <xsl:template match="/">
         <!-- Start HTML document -->
-        <html>
+        <html lang="en">
             <head>
                 <title>Recipes Without Choosen ingredients</title>
                 <!-- Include the generated CSS file -->
-                <link rel="stylesheet" type="text/css" href="styles.css"/>
-                <script src="script.js"></script>
+                <link rel="stylesheet" type="text/css" href="../common/styles.css"/>
+                <script src="../common/script.js"/>
             </head>
             <body>
                 <div class="head-menu-container">
