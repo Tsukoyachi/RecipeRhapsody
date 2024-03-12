@@ -78,9 +78,6 @@
                     <quantity>1 branch</quantity>
                 </ingredient>
             </ingredients>
-            <allergens>
-                <!-- <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130"/> -->
-            </allergens>
             <tools>
                 <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
             </tools>
@@ -124,9 +121,6 @@
                     <quantity>2</quantity>
                 </ingredient>
             </ingredients>
-            <allergens>
-                <!-- <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130"/> -->
-            </allergens>
             <tools>
                 <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
             </tools>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="filterByRateOver4.xsl"?>
-<recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
+<recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/recipeBook.xsd">
     <recipes>
         <recipe>
             <name>Prawn Harissa Spaghetti</name>
@@ -79,9 +79,6 @@
                     <quantity>1 branch</quantity>
                 </ingredient>
             </ingredients>
-            <allergens>
-                <!-- <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130"/> -->
-            </allergens>
             <tools>
                 <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
             </tools>
@@ -125,9 +122,6 @@
                     <quantity>2</quantity>
                 </ingredient>
             </ingredients>
-            <allergens>
-                <!-- <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130"/> -->
-            </allergens>
             <tools>
                 <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
             </tools>
