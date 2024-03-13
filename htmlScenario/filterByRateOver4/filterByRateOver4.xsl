@@ -26,7 +26,7 @@
             </head>
             <body>
                 <div class="head-menu-container">
-                    <img class="logo" src="./../../ressources/logo.png" alt="Logo Image"/>
+                    <img class="logo" src="./../common/ressources/logo.png" alt="Logo Image"/>
                     <div class="search-filter">
                         <p>
                             <input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/recipeBook.xml';" />
