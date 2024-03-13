@@ -59,6 +59,7 @@ body {
     height: 220px;
     border-radius: 8px;
     margin: -70px 0 0 auto;
+    object-fit: cover;
 }
 
 .head-menu-container {
