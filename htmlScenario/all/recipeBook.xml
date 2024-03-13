@@ -60,7 +60,7 @@
             </userRatings>
         </recipe>
         <recipe>
-            <name>Entrecôte</name>
+            <name>Rib Steak</name>
             <image>https://www.smeg.com/binaries/content/gallery/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/brx%3ApostcardDeskLarge?resize=768,574</image>
             <ingredients>
                 <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0">
@@ -144,7 +144,7 @@
                 </step>
             </steps>
             <userRatings>
-                <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="0">It taste good, but it's sickening after a few bite</userRate>
+                <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="1">It taste good, but it's sickening after a few bite</userRate>
                 <userRate userId="a6dbd7141d584b3399626ae2113899c1" grade="1">Low taste, not so much pleasure</userRate>
             </userRatings>
         </recipe>
@@ -165,14 +165,14 @@
         <ingredient ingredientId="b746a8d5899740f3b50852a78259776d" category="fish" season="all">raw king prawns</ingredient>
         <ingredient ingredientId="f3ee2149a9d242f887ef7a32e6c70c9f" category="seasoning" season="all">rose harissa paste</ingredient>
         <ingredient ingredientId="c78e5e93f370459b85830a48ba787a38" category="fruit" season="all">lemon</ingredient>
-        <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0" category="meat" season="all">entrecôte</ingredient>
+        <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0" category="meat" season="all">rib steak</ingredient>
         <ingredient ingredientId="f91e75748241458b83e9174bda8420c3" category="seasoning" season="all">salt</ingredient>
         <ingredient ingredientId="a5fb23a6c0c74253abc6d1232ae7474d" category="seasoning" season="all">pepper</ingredient>
         <ingredient ingredientId="eb5e7d5840a74115b4ccafadd27b990c" category="seasoning" season="all">thyme</ingredient>
         <ingredient ingredientId="b682af6e57ea495cb6b38e40a24d59c5" category="vegetables" season="all">green lentils</ingredient>
         <ingredient ingredientId="fbfa57c78e90459b9fcc3aee5ff7ccd5" category="vegetables" season="summer">carrot</ingredient>
         <ingredient ingredientId="d5dbfdaeb22648bb81415592ff62d42b" category="vegetables" season="all">onion</ingredient>
-        <ingredient ingredientId="afb99739aa594a69b7c9a5fc620acce9" category="seasoning" season="">autumn</ingredient>
+        <ingredient ingredientId="afb99739aa594a69b7c9a5fc620acce9" category="seasoning" season="all">autumn</ingredient>
 
     </ingredients>
 

@@ -60,13 +60,13 @@
 
     <xs:complexType name="RecipeType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="image" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="ingredients" type="IngredientsType" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="allergens" type="AllergensType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="tools" type="ToolsType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="steps" type="StepsType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="userRatings" type="UserRatingsType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="image" type="xs:string" minOccurs="0"/>
+            <xs:element name="ingredients" type="IngredientsType"/>
+            <xs:element name="allergens" type="AllergensType" minOccurs="0"/>
+            <xs:element name="tools" type="ToolsType" minOccurs="0"/>
+            <xs:element name="steps" type="StepsType" minOccurs="0"/>
+            <xs:element name="userRatings" type="UserRatingsType" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -78,7 +78,7 @@
 
     <xs:complexType name="IngredientType">
         <xs:sequence>
-            <xs:element name="quantity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="quantity" type="xs:string"/>
         </xs:sequence>
         <xs:attribute name="ingredientId" type="xs:IDREF" use="required"/>
     </xs:complexType>
@@ -111,8 +111,8 @@
 
     <xs:complexType name="StepType">
         <xs:sequence>
-            <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="photo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="photo" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -126,7 +126,17 @@
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="userId" type="xs:IDREF" use="required"/>
-                <xs:attribute name="grade" type="xs:string" use="required"/>
+                <xs:attribute name="grade">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="5"/>
+                            <xs:fractionDigits value="1"/>
+                            <xs:totalDigits value="2"/>
+                            <xs:pattern value="[0-5](\.[05])?"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -155,11 +165,33 @@
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="ingredientId" type="xs:ID" use="required"/>
-                <xs:attribute name="category" type="xs:string" use="required"/>
-                <xs:attribute name="season" type="xs:string" use="required"/>
+                <xs:attribute name="category" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="cereals"/>
+                            <xs:enumeration value="vegetables"/>
+                            <xs:enumeration value="seasoning"/>
+                            <xs:enumeration value="fish"/>
+                            <xs:enumeration value="meat"/>
+                            <xs:enumeration value="fruit"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="season" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="spring"/>
+                            <xs:enumeration value="summer"/>
+                            <xs:enumeration value="autumn"/>
+                            <xs:enumeration value="winter"/>
+                            <xs:enumeration value="all"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
+
 
     <xs:complexType name="ToolsBaseType">
         <xs:sequence>

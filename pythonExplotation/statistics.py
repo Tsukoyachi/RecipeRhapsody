@@ -15,25 +15,29 @@ class XmlParser:
 
     def getUsers(self, usersTree):
         userList = []
-        for child in usersTree:
-            userList.append({"id": child.attrib['userId'], "name": child.text})
+        if(usersTree):
+            for child in usersTree:
+                userList.append({"id": child.attrib['userId'], "name": child.text})
         return userList
 
     def getTools(self, toolsTree):
         toolList = []
-        for child in toolsTree:
-            toolList.append({"id": child.attrib['toolId'], "name": child.text})
+        if(toolsTree):
+            for tool in toolsTree:
+                toolList.append({"id": tool.attrib['toolId']})
         return toolList
 
     def getIngredients(self, ingredientsTree):
         ingredientList = []
-        for child in ingredientsTree:
-            ingredientList.append({"id": child.attrib['ingredientId'], "category": child.attrib['category'], "season": child.attrib['season'], "name": child.text})
+        if(ingredientsTree):
+            for child in ingredientsTree:
+                ingredientList.append({"id": child.attrib['ingredientId'], "category": child.attrib['category'], "season": child.attrib['season'], "name": child.text})
         return ingredientList
     
     def getRecipes(self, recipesTree):
         recipeList = []
-        
+        if(not(recipesTree)):
+            return recipeList
         for child in recipesTree:
             recipe = {}
             recipe["name"]= child.find('name').text
@@ -44,16 +48,22 @@ class XmlParser:
                 ingredientList.append({"id": ingredient.attrib['ingredientId'], "quantity": ingredient.find('quantity').text})
 
             toolList = []
-            for tool in child.find('tools'):
-                toolList.append({"id": tool.attrib['toolId']})
+            toolsTree = child.find('tools')
+            if(toolsTree):
+                for tool in child.find('tools'):
+                    toolList.append({"id": tool.attrib['toolId']})
 
             allergenList = []
-            for allergen in child.find('allergens'):
-                allergenList.append({"id": allergen.attrib['allergenId']})
+            allergensTree = child.find('allergens')
+            if(allergensTree):
+                for allergen in allergensTree:
+                    allergenList.append({"id": allergen.attrib['allergenId']})
             
             userRatingList = []
-            for userRating in child.find('userRatings'):
-                userRatingList.append({"id": userRating.attrib['userId'], "grade": userRating.attrib['grade'], "comment":userRating.text})
+            userRatingsTree = child.find('userRatings')
+            if(userRatingsTree):
+                for userRating in child.find('userRatings'):
+                    userRatingList.append({"id": userRating.attrib['userId'], "grade": userRating.attrib['grade'], "comment":userRating.text})
 
             recipe["ingredients"]= ingredientList
             recipe["tools"]= toolList

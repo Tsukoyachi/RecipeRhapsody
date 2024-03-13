@@ -28,7 +28,7 @@ class XmlParser:
     def getIngredients(self, ingredientsTree):
         ingredientList = []
         for child in ingredientsTree:
-            ingredientList.append({"id": int(child.attrib['ingredientId']), "category": child.attrib['category'], "season": child.attrib['season'], "name": child.text})
+            ingredientList.append({"id": child.attrib['ingredientId'], "category": child.attrib['category'], "season": child.attrib['season'], "name": child.text})
         return ingredientList
     
     def getRecipes(self, recipesTree):
@@ -41,15 +41,16 @@ class XmlParser:
 
             ingredientList = []
             for ingredient in child.find('ingredients'):
-                ingredientList.append({"id": int(ingredient.attrib['ingredientId']), "quantity": ingredient.find('quantity').text})
+                ingredientList.append({"id": ingredient.attrib['ingredientId'], "quantity": ingredient.find('quantity').text})
 
             toolList = []
             for tool in child.find('tools'):
                 toolList.append({"id": tool.attrib['toolId']})
 
             allergenList = []
-            for allergen in child.find('allergens'):
-                allergenList.append({"id": allergen.attrib['allergenId']})
+            if(child.find('allergens')):
+                for allergen in child.find('allergens'):
+                    allergenList.append({"id": allergen.attrib['allergenId']})
             
             userRatingList = []
             for userRating in child.find('userRatings'):
@@ -77,7 +78,7 @@ class RecipesFilter:
         for recipe in self.__recipes:
             ingredientsCopy = ingredients.copy()
             for ingredient in recipe["ingredients"]:
-                ingredientId = int(ingredient['id'])
+                ingredientId = ingredient['id']
                 ingredientName = self.getMatchingDictInList("id", ingredientId)["name"]
                 
                 if ingredientName in ingredientsCopy: ingredientsCopy.remove(ingredientName)

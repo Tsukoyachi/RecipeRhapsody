@@ -5,6 +5,15 @@
     <!-- Define a variable for ingredient names -->
     <xsl:variable name="ingredientNames" select="/recipeBook/ingredients/ingredient"/>
 
+    <!-- Template to calculate average rating -->
+    <xsl:template name="calculateAverageRating">
+        <xsl:param name="userRates"/>
+        <!-- Calculate total rating -->
+        <xsl:variable name="totalRating" select="sum($userRates/@grade)"/>
+        <!-- Calculate average -->
+        <xsl:value-of select="$totalRating div count($userRates)"/>
+    </xsl:template>
+
     <!-- Root template -->
     <xsl:template match="/">
         <!-- Start HTML document -->
@@ -39,35 +48,45 @@
                 </div>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipe[userRatings/userRate[@grade > 4]]"/>
+                    <xsl:apply-templates select="//recipe"/>
                 </div>
             </body>
         </html>
     </xsl:template>
 
-    <!-- Template to match recipes without the excluded allergenId -->
+    <!-- Template to match recipes -->
     <xsl:template match="recipe">
-        <!-- Display recipe information -->
-        <div class="recipes-container" onclick="extend(this)">
-            <div class="recipe-header">
-                <h2 class="recipe-title-header"><xsl:value-of select="name"/></h2>
-                <img class="recipe-image-header" src="{image}" alt="Recipe Image" id="image-header"/>
+        <!-- Calculate average rating -->
+        <xsl:variable name="averageRating">
+            <xsl:call-template name="calculateAverageRating">
+                <xsl:with-param name="userRates" select="userRatings/userRate"/>
+            </xsl:call-template>
+        </xsl:variable>
+
+        <!-- Display recipe if average rating is greater than 4 -->
+        <xsl:if test="$averageRating &gt; 4">
+            <!-- Display recipe information -->
+            <div class="recipes-container" onclick="extend(this)">
+                <div class="recipe-header">
+                    <h2 class="recipe-title-header"><xsl:value-of select="name"/></h2>
+                    <img class="recipe-image-header" src="{image}" alt="Recipe Image" id="image-header"/>
+                </div>
+                <!-- Display recipe image -->
+                <div id="content">
+                    <img class="recipe-image" src="{image}" alt="Recipe Image"/>
+                    <p class="ingredients-title"><strong>Ingredients:</strong></p>
+                    <ul class="ingredients-list">
+                        <!-- Apply the template to select ingredients -->
+                        <xsl:apply-templates select="ingredients/ingredient"/>
+                    </ul>
+                    <p class="steps-title"><strong>Steps:</strong></p>
+                    <ol class="steps-list">
+                        <!-- Apply the template to select steps -->
+                        <xsl:apply-templates select="steps/step"/>
+                    </ol>
+                </div>
             </div>
-            <!-- Display recipe image -->
-            <div id="content">
-                <img class="recipe-image" src="{image}" alt="Recipe Image"/>
-                <p class="ingredients-title"><strong>Ingredients:</strong></p>
-                <ul class="ingredients-list">
-                    <!-- Apply the template to select ingredients -->
-                    <xsl:apply-templates select="ingredients/ingredient"/>
-                </ul>
-                <p class="steps-title"><strong>Steps:</strong></p>
-                <ol class="steps-list">
-                    <!-- Apply the template to select steps -->
-                    <xsl:apply-templates select="steps/step"/>
-                </ol>
-            </div>
-        </div>
+        </xsl:if>
     </xsl:template>
 
     <!-- Template to match ingredients -->
