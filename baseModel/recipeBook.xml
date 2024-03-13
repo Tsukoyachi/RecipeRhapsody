@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
     <recipes>
-        <recipe>
+        <recipe recipeId="ed59c15adb99471eba2ef1a76d106b2b" price="8.99">
             <name>Prawn Harissa Spaghetti</name>
             <image>https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn-harissa-spaghetti-d29786f.jpg?resize=768,574</image>
             <ingredients>
@@ -58,7 +58,7 @@
                 <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="4.5">Easy and efficient</userRate>
             </userRatings>
         </recipe>
-        <recipe>
+        <recipe recipeId="bcd32a9fe07b4f93949714d7d374dbe6" price="13.99">
             <name>Rib Steak</name>
             <image>https://www.smeg.com/binaries/content/gallery/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/brx%3ApostcardDeskLarge?resize=768,574</image>
             <ingredients>
@@ -104,7 +104,7 @@
                 <userRate userId="a6dbd7141d584b3399626ae2113899c1" grade="5">Incredible for my saturday launch</userRate>
             </userRatings>
         </recipe>
-        <recipe>
+        <recipe recipeId="cfac1421e44e42658318468dc8d6cdaf" price="5.99">
             <name>Lentils with carrots</name>
             <image>https://www.papillesetpupilles.fr/wp-content/uploads/2012/12/Lentilles-a%CC%80-la-Marocaine-.jpg?resize=768,574</image>
             <ingredients>
@@ -155,6 +155,10 @@
         <user userId="a6dbd7141d584b3399626ae2113899c1">Yvann Ponce</user>
     </users>
 
+    <deliveryMan>
+        <deliveryMan deliveryId="d7ccae56da5a4a09b5a34dd8a6168131">John Doe</deliveryMan>
+    </deliveryMan>
+
     <ingredients>
         <ingredient ingredientId="b29e99552e534ec6941167bf5786bb95" category="cereals" season="all">pasta</ingredient>
         <ingredient ingredientId="e8f5ec0b471d48d9a35004ed4db435af" category="vegetables" season="spring">long-stem broccoli</ingredient>
@@ -183,4 +187,13 @@
     <allergens>
         <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130">gluten</allergen>
     </allergens>
+
+    <orders>
+        <order userId="d6caccae978f429592b2e196bd93a5e5" deliveryManId="d7ccae56da5a4a09b5a34dd8a6168131" orderId="b934abac0d4c44e7afaafd4035fdccd0">
+            <recipes>
+                <recipe recipeId="ed59c15adb99471eba2ef1a76d106b2b" quantity="1"/>
+            </recipes>
+            <address>200 Avenue Roumanille, 06560 Valbonne</address>
+        </order>
+    </orders>
 </recipeBook>

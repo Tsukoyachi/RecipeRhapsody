@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="recipeBook" type="RecipeBookType">
+        <xs:key name="recipeId">
+            <xs:selector xpath="./recipes/recipe"/>
+            <xs:field xpath="@recipeId"/>
+        </xs:key>
+
+        <xs:keyref name="recipeIdRef" refer="recipeId">
+            <xs:selector xpath="./orders/order/recipes/recipe"/>
+            <xs:field xpath="@recipeId"/>
+        </xs:keyref>
+
         <xs:key name="userId">
             <xs:selector xpath="./users/user"/>
             <xs:field xpath="@userId"/>
@@ -9,6 +19,16 @@
         <xs:keyref name="userIdRef" refer="userId">
             <xs:selector xpath="./recipes/recipe/userRatings/userRate"/>
             <xs:field xpath="@userId"/>
+        </xs:keyref>
+
+        <xs:key name="deliveryId">
+            <xs:selector xpath="./deliveryMans/deliveryMan"/>
+            <xs:field xpath="@deliveryId"/>
+        </xs:key>
+
+        <xs:keyref name="deliveryIdRef" refer="deliveryId">
+            <xs:selector xpath="./orders/order"/>
+            <xs:field xpath="@deliveryId"/>
         </xs:keyref>
 
         <xs:key name="ingredientId">
@@ -40,15 +60,22 @@
             <xs:selector xpath="./recipes/recipe/tools/tool"/>
             <xs:field xpath="@toolId"/>
         </xs:keyref>
+
+        <xs:key name="orderId">
+            <xs:selector xpath="./orders/order"/>
+            <xs:field xpath="@orderId"/>
+        </xs:key>
     </xs:element>
 
     <xs:complexType name="RecipeBookType">
         <xs:sequence>
-            <xs:element name="recipes" type="RecipesType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="users" type="UsersBaseType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="ingredients" type="IngredientsBaseType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="tools" type="ToolsBaseType" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="allergens" type="AllergensBaseType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="recipes" type="RecipesType" minOccurs="0"/>
+            <xs:element name="users" type="UsersBaseType" minOccurs="0"/>
+            <xs:element name="deliveryMan" type="DeliveryMansBaseType" minOccurs="0"/>
+            <xs:element name="ingredients" type="IngredientsBaseType" minOccurs="0"/>
+            <xs:element name="tools" type="ToolsBaseType" minOccurs="0"/>
+            <xs:element name="allergens" type="AllergensBaseType" minOccurs="0"/>
+            <xs:element name="orders" type="OrdersType" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -68,6 +95,15 @@
             <xs:element name="steps" type="StepsType" minOccurs="0"/>
             <xs:element name="userRatings" type="UserRatingsType" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="recipeId" type="xs:ID" use="required"/>
+        <xs:attribute name="price" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                    <xs:minInclusive value="0.01"/>
+                    <xs:fractionDigits value="2"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="IngredientsType">
@@ -161,6 +197,20 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="DeliveryMansBaseType">
+        <xs:sequence>
+            <xs:element name="deliveryMan" type="DeliveryManBaseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DeliveryManBaseType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="deliveryId" type="xs:ID"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
     <xs:complexType name="IngredientBaseType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -217,6 +267,44 @@
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="allergenId" type="xs:ID" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="OrdersType">
+        <xs:sequence>
+            <xs:element name="order" type="OrderType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrderType">
+        <xs:sequence>
+            <xs:element name="recipes" type="OrderRecipesType"/>
+            <xs:element name="address" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="userId" type="xs:IDREF" use="required"/>
+        <xs:attribute name="deliveryManId" type="xs:IDREF" use="required"/>
+        <xs:attribute name="orderId" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="OrderRecipesType">
+        <xs:sequence>
+            <xs:element name="recipe" type="OrderRecipeType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrderRecipeType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="recipeId" type="xs:IDREF" use="required"/>
+                <xs:attribute name="quantity" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minInclusive value="1"/>
+                            <xs:fractionDigits value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
