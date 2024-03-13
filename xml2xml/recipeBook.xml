@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="adminstrationBoard.xsl"?>
+<recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
+    <recipes>
+        <recipe>
+            <name>Prawn Harissa Spaghetti</name>
+            <image>https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn-harissa-spaghetti-d29786f.jpg?resize=768,574</image>
+            <ingredients>
+                <ingredient ingredientId="b29e99552e534ec6941167bf5786bb95">
+                    <quantity>180g</quantity>
+                </ingredient>
+                <ingredient ingredientId="e8f5ec0b471d48d9a35004ed4db435af">
+                    <quantity>100g</quantity>
+                </ingredient>
+                <ingredient ingredientId="bd52ce293a7e4a9f87f6e189369f1d34">
+                    <quantity>2 tablespoon</quantity>
+                </ingredient>
+                <ingredient ingredientId="b428ec01b3b642a891973c80aad42ae9">
+                    <quantity>1 large</quantity>
+                </ingredient>
+                <ingredient ingredientId="a2cde1f3288b43528535fdf6fd64ef05">
+                    <quantity>150g</quantity>
+                </ingredient>
+                <ingredient ingredientId="b746a8d5899740f3b50852a78259776d">
+                    <quantity>150g</quantity>
+                </ingredient>
+                <ingredient ingredientId="f3ee2149a9d242f887ef7a32e6c70c9f">
+                    <quantity>1 heaped tablespoon</quantity>
+                </ingredient>
+                <ingredient ingredientId="c78e5e93f370459b85830a48ba787a38">
+                    <quantity>1</quantity>
+                </ingredient>
+            </ingredients>
+            <allergens>
+                <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130"/>
+            </allergens>
+            <tools>
+                <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
+            </tools>
+            <steps>
+                <step>
+                    <description>Bring a pan of lightly salted water to the boil. Add the broccoli and boil for 1 min 30 secs, or until tender. Drain and set aside. Cook the spaghetti following pack instructions, then drain, reserving a ladleful of cooking water.</description>
+                    <photo>https://www.wikihow.com/images/thumb/d/d0/Boil-Water-Step-8-Version-9.jpg/v4-460px-Boil-Water-Step-8-Version-9.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Heat the oil in a large frying pan, add the garlic clove and fry over a low heat for 2 mins. Remove with a slotted spoon and discard, leaving the flavoured oil.</description>
+                    <photo>https://www.allrecipes.com/thmb/BD9DhdanpJsrBu6rHK7EFrRkBGU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-roast-garlic-in-pan-ar-2000-7bec42d9517e4cab9db93619a5bba52d.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Add the tomatoes to the pan and fry over a medium heat for 5 mins, or until beginning to soften and turn juicy. Stir through the prawns and cook for 2 mins, or until turning pink. Add the harissa and lemon zest, stirring to coat.</description>
+                    <photo>https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/07/How-to-Make-Blistered-Tomatoes-1.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Toss the cooked spaghetti and pasta water through the prawns and harissa. Stir through the broccoli, season to taste and serve.</description>
+                    <photo>https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn-harissa-spaghetti-d29786f.jpg?resize=768,574</photo>
+                </step>
+            </steps>
+            <userRatings>
+                <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="4.5">Easy and efficient</userRate>
+            </userRatings>
+        </recipe>
+        <recipe>
+            <name>Entrecôte</name>
+            <image>https://www.smeg.com/binaries/content/gallery/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/web_costata_depositphotos_47878327_xl-2015.jpg.jpg/brx%3ApostcardDeskLarge?resize=768,574</image>
+            <ingredients>
+                <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0">
+                    <quantity>400g</quantity>
+                </ingredient>
+                <ingredient ingredientId="f91e75748241458b83e9174bda8420c3">
+                    <quantity>1 pincée</quantity>
+                </ingredient>
+                <ingredient ingredientId="bd52ce293a7e4a9f87f6e189369f1d34">
+                    <quantity>2 tablespoon</quantity>
+                </ingredient>
+                <ingredient ingredientId="b428ec01b3b642a891973c80aad42ae9">
+                    <quantity>1 large</quantity>
+                </ingredient>
+                <ingredient ingredientId="eb5e7d5840a74115b4ccafadd27b990c">
+                    <quantity>1 branch</quantity>
+                </ingredient>
+            </ingredients>
+            <tools>
+                <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
+            </tools>
+            <steps>
+                <step>
+                    <description>Melt the butter and oil mixture to have a very hot pan before placing the meat. Place the meat on the very hot pan and move it around so it doesn't stick.</description>
+                    <photo>https://images.slurrp.com/prodarticles/a946n88zu4.webp?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Place a sprig of thyme or herbs on the meat while cooking the first side.  </description>
+                    <photo>https://thekitchencommunity.org/wp-content/uploads/2024/02/image-1384.jpeg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Depending on the thickness of the meat and the desired cooking level (rare, medium rare, cooked), cook for 2 to 10 minutes per side. In general, 5 minutes is sufficient.</description>
+                    <photo>https://i.ytimg.com/vi/8QU5KMS1pjI/mqdefault.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Once the desired cooking level is reached, let it rest for 5 minutes under aluminum foil to let the meat relax while keeping it warm before serving.</description>
+                    <photo>https://www.foodandwine.com/thmb/H2lW8-DxUooFNawAapOllKOiY34=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Why-Let-Meat-Rest-After-Cooking-FT-BLOG0623-aa23e85b40ba4069837bda52a8b706d1.jpg?resize=768,574</photo>
+                </step>
+            </steps>
+            <userRatings>
+                <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="4.5">Easy and efficient</userRate>
+                <userRate userId="a6dbd7141d584b3399626ae2113899c1" grade="5">Incredible for my saturday launch</userRate>
+            </userRatings>
+        </recipe>
+        <recipe>
+            <name>Lentils with carrots</name>
+            <image>https://www.papillesetpupilles.fr/wp-content/uploads/2012/12/Lentilles-a%CC%80-la-Marocaine-.jpg?resize=768,574</image>
+            <ingredients>
+                <ingredient ingredientId="b682af6e57ea495cb6b38e40a24d59c5">
+                    <quantity>400g</quantity>
+                </ingredient>
+                <ingredient ingredientId="fbfa57c78e90459b9fcc3aee5ff7ccd5">
+                    <quantity>1</quantity>
+                </ingredient>
+                <ingredient ingredientId="d5dbfdaeb22648bb81415592ff62d42b">
+                    <quantity>2</quantity>
+                </ingredient>
+                <ingredient ingredientId="afb99739aa594a69b7c9a5fc620acce9">
+                    <quantity>2</quantity>
+                </ingredient>
+            </ingredients>
+            <tools>
+                <tool toolId="be10b782fcc745a191ef4be306d85b6c"/>
+            </tools>
+            <steps>
+                <step>
+                    <description>Peel the onions, ginger and garlic cloves and chop them. Peel the carrot and cut it into large cubes.</description>
+                    <photo>https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/3690/live/e1eb2a80-6f47-11ed-94b2-efbc7109d3dd.jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Sauté the chopped onions until they become translucent. Add garlic and ginger, but not too much...otherwise their taste could be distracting. Now add the lentils and carrot cubes. Cover with water and simmer for 30 minutes.</description>
+                    <photo>https://www.sushin.fr/wp-content/uploads/2022/12/Bendakaya-Fry-Recettes-de-legumes-de-Dassana-9118188..jpg?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Now add the not-so-secret final ingredient: balsamic vinegar. Cook until the liquid has been completely absorbed. This dish goes with just about everything. And you won’t go wrong serving it with coleslaw…</description>
+                    <photo>https://img.passeportsante.net/1200x675/2022-08-01/shutterstock-1101390824.webp?resize=768,574</photo>
+                </step>
+                <step>
+                    <description>Directed by Élisabeth Scotto. Styling Sergio Da Silva. Photos Édouard Sicot. Recipes collected by Marina Rozenman.</description>
+                    <photo>https://sf2.viepratique.fr/wp-content/uploads/sites/2/2014/07/lentilles.jpg?resize=768,574</photo>
+                </step>
+            </steps>
+            <userRatings>
+                <userRate userId="d6caccae978f429592b2e196bd93a5e5" grade="0">It taste good, but it's sickening after a few bite</userRate>
+                <userRate userId="a6dbd7141d584b3399626ae2113899c1" grade="1">Low taste, not so much pleasure</userRate>
+            </userRatings>
+        </recipe>
+        
+    </recipes>
+
+    <users>
+        <user userId="d6caccae978f429592b2e196bd93a5e5">Axel Delille</user>
+        <user userId="a6dbd7141d584b3399626ae2113899c1">Yvann Ponce</user>
+    </users>
+
+    <ingredients>
+        <ingredient ingredientId="b29e99552e534ec6941167bf5786bb95" category="cereals" season="all">pasta</ingredient>
+        <ingredient ingredientId="e8f5ec0b471d48d9a35004ed4db435af" category="vegetables" season="spring">long-stem broccoli</ingredient>
+        <ingredient ingredientId="bd52ce293a7e4a9f87f6e189369f1d34" category="seasoning" season="all">olive oil</ingredient>
+        <ingredient ingredientId="b428ec01b3b642a891973c80aad42ae9" category="seasoning" season="summer">garlic clove</ingredient>
+        <ingredient ingredientId="a2cde1f3288b43528535fdf6fd64ef05" category="vegetables" season="summer">cherry tomatoes</ingredient>
+        <ingredient ingredientId="b746a8d5899740f3b50852a78259776d" category="fish" season="all">raw king prawns</ingredient>
+        <ingredient ingredientId="f3ee2149a9d242f887ef7a32e6c70c9f" category="seasoning" season="all">rose harissa paste</ingredient>
+        <ingredient ingredientId="c78e5e93f370459b85830a48ba787a38" category="fruit" season="all">lemon</ingredient>
+        <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0" category="meat" season="all">entrecôte</ingredient>
+        <ingredient ingredientId="f91e75748241458b83e9174bda8420c3" category="seasoning" season="all">salt</ingredient>
+        <ingredient ingredientId="a5fb23a6c0c74253abc6d1232ae7474d" category="seasoning" season="all">pepper</ingredient>
+        <ingredient ingredientId="eb5e7d5840a74115b4ccafadd27b990c" category="seasoning" season="all">thyme</ingredient>
+        <ingredient ingredientId="b682af6e57ea495cb6b38e40a24d59c5" category="vegetables" season="all">green lentils</ingredient>
+        <ingredient ingredientId="fbfa57c78e90459b9fcc3aee5ff7ccd5" category="vegetables" season="summer">carrot</ingredient>
+        <ingredient ingredientId="d5dbfdaeb22648bb81415592ff62d42b" category="vegetables" season="all">onion</ingredient>
+        <ingredient ingredientId="afb99739aa594a69b7c9a5fc620acce9" category="seasoning" season="">autumn</ingredient>
+
+    </ingredients>
+
+    <tools>
+        <tool toolId="be10b782fcc745a191ef4be306d85b6c">pan</tool>
+        <tool toolId="ea487a7e4b774b1e9d0b1f53613a4272">frying pan</tool>
+    </tools>
+
+    <allergens>
+        <allergen allergenId="d7ccae56da5a4a09b5a34dd8a6168130">gluten</allergen>
+    </allergens>
+</recipeBook>
