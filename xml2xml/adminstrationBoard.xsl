@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
     <xsl:template match="/">
+        
         <adminBoard>
-            <recipes count="{count(//recipe)}">
+            <recipes count="{count(recipeBook/recipes/recipe)}">
                 <xsl:apply-templates select="recipeBook/recipes/recipe"/>
             </recipes>
-            <ingredients count="{count(//ingredient)}">
+            <ingredients count="{count(recipeBook/ingredients/ingredient)}">
                 <xsl:apply-templates select="recipeBook/ingredients/ingredient"/>
             </ingredients>
-            <tools count="{count(//tool)}">
+            <tools count="{count(recipeBook/tools/tool)}">
                 <xsl:apply-templates select="recipeBook/tools/tool"/>
             </tools>
-            <users count="{count(//user)}">
+            <users count="{count(recipeBook/users/user)}">
                 <xsl:apply-templates select="recipeBook/users/user"/>
             </users>
         </adminBoard>
