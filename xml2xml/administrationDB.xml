@@ -6,7 +6,7 @@
             <rate>4</rate>
         </recipe>
         <recipe>
-            <name>Entrecôte</name>
+            <name>Rib Steak</name>
             <rate>5</rate>
         </recipe>
         <recipe>
@@ -29,7 +29,7 @@
         <ingredient ingredientId="b746a8d5899740f3b50852a78259776d" category="fish" season="all">raw king prawns</ingredient>
         <ingredient ingredientId="f3ee2149a9d242f887ef7a32e6c70c9f" category="seasoning" season="all">rose harissa paste</ingredient>
         <ingredient ingredientId="c78e5e93f370459b85830a48ba787a38" category="fruit" season="all">lemon</ingredient>
-        <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0" category="meat" season="all">entrecôte</ingredient>
+        <ingredient ingredientId="da4a65b07ab2400dbc71541ba44baaf0" category="meat" season="all">rib steak</ingredient>
         <ingredient ingredientId="f91e75748241458b83e9174bda8420c3" category="seasoning" season="all">salt</ingredient>
         <ingredient ingredientId="a5fb23a6c0c74253abc6d1232ae7474d" category="seasoning" season="all">pepper</ingredient>
         <ingredient ingredientId="eb5e7d5840a74115b4ccafadd27b990c" category="seasoning" season="all">thyme</ingredient>
