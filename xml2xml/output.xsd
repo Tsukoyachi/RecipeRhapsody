@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Define element types -->
+    <xs:element name="adminBoard">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="recipes"/>
+                <xs:element ref="ingredients"/>
+                <xs:element ref="tools"/>
+                <xs:element ref="users"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="recipes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="recipe" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="averageGrade" type="xs:decimal"/>
+                            <xs:element name="numberOfIngredients" type="xs:integer"/>
+                            <xs:element name="numberOfTools" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="count" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ingredients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ingredient" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="category" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="count" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="tools">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tool" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="count" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="count" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

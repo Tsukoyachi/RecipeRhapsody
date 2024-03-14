@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adminBoard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="output.xsd">
+    <recipes count="3">
+        <recipe>
+            <name>Prawn Harissa Spaghetti</name>
+            <averageGrade>4.5</averageGrade>
+            <numberOfIngredients>8</numberOfIngredients>
+            <numberOfTools>1</numberOfTools>
+        </recipe>
+        <recipe>
+            <name>Rib Steak</name>
+            <averageGrade>4.75</averageGrade>
+            <numberOfIngredients>5</numberOfIngredients>
+            <numberOfTools>1</numberOfTools>
+        </recipe>
+        <recipe>
+            <name>Lentils with carrots</name>
+            <averageGrade>1</averageGrade>
+            <numberOfIngredients>4</numberOfIngredients>
+            <numberOfTools>1</numberOfTools>
+        </recipe>
+    </recipes>
+    <ingredients count="16">
+        <ingredient>
+            <name>pasta</name>
+            <category>cereals</category>
+        </ingredient>
+        <ingredient>
+            <name>long-stem broccoli</name>
+            <category>vegetables</category>
+        </ingredient>
+        <ingredient>
+            <name>olive oil</name>
+            <category>seasoning</category>
+        </ingredient>
+        <ingredient>
+            <name>garlic clove</name>
+            <category>seasoning</category>
+        </ingredient>
+        <ingredient>
+            <name>cherry tomatoes</name>
+            <category>vegetables</category>
+        </ingredient>
+        <ingredient>
+            <name>raw king prawns</name>
+            <category>fish</category>
+        </ingredient>
+        <ingredient>
+            <name>rose harissa paste</name>
+            <category>seasoning</category>
+        </ingredient>
+        <ingredient>
+            <name>lemon</name>
+            <category>fruit</category>
+        </ingredient>
+        <ingredient>
+            <name>rib steak</name>
+            <category>meat</category>
+        </ingredient>
+        <ingredient>
+            <name>salt</name>
+            <category>seasoning</category>
+        </ingredient>
+        <ingredient>
+            <name>pepper</name>
+            <category>seasoning</category>
+        </ingredient>
+        <ingredient>
+            <name>thyme</name>
+            <category>seasoning</category>
+        </ingredient>
+        <ingredient>
+            <name>green lentils</name>
+            <category>vegetables</category>
+        </ingredient>
+        <ingredient>
+            <name>carrot</name>
+            <category>vegetables</category>
+        </ingredient>
+        <ingredient>
+            <name>onion</name>
+            <category>vegetables</category>
+        </ingredient>
+        <ingredient>
+            <name>autumn</name>
+            <category>seasoning</category>
+        </ingredient>
+    </ingredients>
+    <tools count="2">
+        <tool>
+            <name>pan</name>
+        </tool>
+        <tool>
+            <name>frying pan</name>
+        </tool>
+    </tools>
+    <users count="2">
+        <user>
+            <name>Axel Delille</name>
+        </user>
+        <user>
+            <name>Yvann Ponce</name>
+        </user>
+    </users>
+</adminBoard>
