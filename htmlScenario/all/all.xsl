@@ -19,22 +19,10 @@
                 <div class="head-menu-container">
                     <img class="logo" src="./../common/ressources/logo.png" alt="Logo Image"/>
                     <div class="search-filter">
-                        <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/recipeBook.xml';" />
-                            Without gluten
-                        </p>
-                        <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByMeat/recipeBook.xml'"/>
-                            With meat
-                        </p>
-                        <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByVeggie/recipeBook.xml'"/>
-                            Veggie
-                        </p>
-                        <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml'"/>
-                            Minimal rate : 4
-                        </p>
+                        <p><input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/recipeBook.xml';" /> Without gluten</p>
+                        <p><input type="checkbox" id="exact-only" onclick="location.href = '../filterByMeat/recipeBook.xml'"/> With meat</p>
+                        <p><input type="checkbox" id="exact-only" onclick="location.href = '../filterByVeggie/recipeBook.xml'"/> Veggie</p>
+                        <p><input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml'"/> Minimal rate : 4</p>
                     </div>
                 </div>
                 <div class="recipeBook-container">
