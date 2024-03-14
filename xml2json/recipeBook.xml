@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="orderSummary.xsl"?>
 <recipeBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipeBook.xsd">
     <recipes>
         <recipe recipeId="ed59c15adb99471eba2ef1a76d106b2b" price="8.99">
@@ -188,6 +189,7 @@
         <order userId="d6caccae978f429592b2e196bd93a5e5" deliveryManId="d7ccae56da5a4a09b5a34dd8a6168131" orderId="b934abac0d4c44e7afaafd4035fdccd0">
             <recipes>
                 <recipe recipeId="ed59c15adb99471eba2ef1a76d106b2b" quantity="1"/>
+                <recipe recipeId="bcd32a9fe07b4f93949714d7d374dbe6" quantity="3"/>
             </recipes>
             <address>200 Avenue Roumanille, 06560 Valbonne</address>
         </order>

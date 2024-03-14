@@ -1,0 +1,21 @@
+{
+  "$schema" : "./outputSchema.json",
+  "orderId": "b934abac0d4c44e7afaafd4035fdccd0",
+  "customer": {
+    "name": "Axel Delille",
+    "address": "200 Avenue Roumanille, 06560 Valbonne"
+  },
+  "content": [
+    {
+      "recipeId": "ed59c15adb99471eba2ef1a76d106b2b",
+      "pricePerUnity": 8.99,
+      "quantity": 1
+    },
+    {
+      "recipeId": "bcd32a9fe07b4f93949714d7d374dbe6",
+      "pricePerUnity": 13.99,
+      "quantity": 3
+    }
+  ],
+  "totalPrice": 50.96
+}
