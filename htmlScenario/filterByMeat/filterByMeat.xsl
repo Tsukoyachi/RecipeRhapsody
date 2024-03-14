@@ -42,7 +42,7 @@
                 </div>
                 <div class="recipeBook-container">
                     <!-- Apply the template to select recipes without the excluded allergenId -->
-                    <xsl:apply-templates select="//recipe[ingredients/ingredient/@ingredientId = $excludedMeatId]"/>
+                    <xsl:apply-templates select="//recipeBook/recipes/recipe[ingredients/ingredient/@ingredientId = $excludedMeatId]"/>
                 </div>
             </body>
         </html>

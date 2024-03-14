@@ -3,7 +3,7 @@
 
     <xsl:template match="/">
         
-        <adminBoard>
+        <adminBoard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="output.xsd">
             <recipes count="{count(recipeBook/recipes/recipe)}">
                 <xsl:apply-templates select="recipeBook/recipes/recipe"/>
             </recipes>

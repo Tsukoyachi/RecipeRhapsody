@@ -16,11 +16,11 @@
         <recipe>
             <name>Lentils with carrots</name>
             <averageGrade>1</averageGrade>
-            <numberOfIngredients>4</numberOfIngredients>
+            <numberOfIngredients>3</numberOfIngredients>
             <numberOfTools>1</numberOfTools>
         </recipe>
     </recipes>
-    <ingredients count="16">
+    <ingredients count="15">
         <ingredient>
             <name>pasta</name>
             <category>cereals</category>
@@ -80,10 +80,6 @@
         <ingredient>
             <name>onion</name>
             <category>vegetables</category>
-        </ingredient>
-        <ingredient>
-            <name>autumn</name>
-            <category>seasoning</category>
         </ingredient>
     </ingredients>
     <tools count="2">
