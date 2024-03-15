@@ -23,19 +23,19 @@
                     <img class="logo" src="./../common/ressources/logo.png" alt="Logo Image"/>
                     <div class="search-filter">
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/recipeBook.xml';" />
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByAllergen/output.html';" />
                             Without gluten
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByMeat/recipeBook.xml'"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByMeat/output.html'"/>
                             With meat
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../all/recipeBook.xml'"  checked="true"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../all/output.html'"  checked="true"/>
                             Veggie
                         </p>
                         <p>
-                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/recipeBook.xml'"/>
+                            <input type="checkbox" id="exact-only" onclick="location.href = '../filterByRateOver4/output.html'"/>
                             Minimal rate : 4
                         </p>
                     </div>
